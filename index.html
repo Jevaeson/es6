@@ -168,6 +168,33 @@
       // 函数参数的默认值
       // 函数的剩余参数 rest
       // 扩展运算符 合并或拷贝对象
+
+      // class
+      // function CreateCat(catName, catAge) {
+      //   this.catName = catName
+      //   this.catAge = catAge
+      // }
+      // CreateCat.prototype.sing = function() {
+      //   console.log('hahaha')
+      // }
+      // const xiaohua = new CreateCat('xiaohua', 2)
+      // console.log(xiaohua)
+
+      class CreateCat {
+        // constructor 相当于之前的构造函数 这里叫做构造器
+        // es6 class 内只能定义方法而且方法之间不能加逗号
+        // 使用 new + class名 创建实例化类 调用类的时候传递的参数会给到 constructor 方法
+        //  并且contructor 方法之外的方法相当于类的 共有方法 就相当于之前原型内的方法
+        constructor(catName, catAge) {
+          this.catName = catName
+          this.catAge = catAge
+        }
+        sing() {
+          console.log('hahaha')
+        }
+      }
+      const xiaohua = new CreateCat('xiaohua', 2)
+      console.log(xiaohua)
     </script>
   </body>
 </html>
